@@ -1,18 +1,11 @@
-#define _USE_MATH_DEFINES
-#include <cmath>
 #include <iostream>
 #include <cstdlib>
 #include <clocale>
 #include <iomanip>
-#include <vector>
+#include "Algorithm.h"
 
 using namespace std;
 
-double FRand(double min, double max)
-{
-	double tmp = static_cast<double>(rand()) / RAND_MAX;
-	return min + tmp * (max - min);
-}
 
 int main()
 {
@@ -23,7 +16,9 @@ int main()
 	cin >> N;
 	cout << "¬ведите M и p:" << endl;
 	cin >> M >> p;
+	
 	vector<int> n;
+	/*
 	for (int i = 0; i <= M; i++)
 	{
 		n.push_back(0);
@@ -42,6 +37,8 @@ int main()
 		}
 		n[count]++;
 	}
+	*/
+	n = Vector_n_Generator(N, M, p);
 	//ѕечать
 	cout << endl;
 	for (int i = 0; i <= M; i++)
