@@ -51,6 +51,22 @@ namespace Graph {
 	private: System::Windows::Forms::Label^ label1;
 	private: System::Windows::Forms::Label^ label2;
 	private: System::Windows::Forms::Label^ label3;
+	private: System::Windows::Forms::TextBox^ textBox1;
+	private: System::Windows::Forms::TextBox^ textBox2;
+	private: System::Windows::Forms::TextBox^ textBox3;
+	private: System::Windows::Forms::TextBox^ textBox4;
+	private: System::Windows::Forms::TextBox^ textBox5;
+	private: System::Windows::Forms::TextBox^ textBox6;
+	private: System::Windows::Forms::TextBox^ textBox7;
+	private: System::Windows::Forms::TextBox^ textBox8;
+	private: System::Windows::Forms::Label^ label4;
+	private: System::Windows::Forms::Label^ label5;
+	private: System::Windows::Forms::Label^ label6;
+	private: System::Windows::Forms::Label^ label7;
+	private: System::Windows::Forms::Label^ label8;
+	private: System::Windows::Forms::Label^ label9;
+	private: System::Windows::Forms::Label^ label10;
+	private: System::Windows::Forms::Label^ label11;
 
 
 
@@ -206,6 +222,22 @@ namespace Graph {
 			this->label1 = (gcnew System::Windows::Forms::Label());
 			this->label2 = (gcnew System::Windows::Forms::Label());
 			this->label3 = (gcnew System::Windows::Forms::Label());
+			this->textBox1 = (gcnew System::Windows::Forms::TextBox());
+			this->textBox2 = (gcnew System::Windows::Forms::TextBox());
+			this->textBox3 = (gcnew System::Windows::Forms::TextBox());
+			this->textBox4 = (gcnew System::Windows::Forms::TextBox());
+			this->textBox5 = (gcnew System::Windows::Forms::TextBox());
+			this->textBox6 = (gcnew System::Windows::Forms::TextBox());
+			this->textBox7 = (gcnew System::Windows::Forms::TextBox());
+			this->textBox8 = (gcnew System::Windows::Forms::TextBox());
+			this->label4 = (gcnew System::Windows::Forms::Label());
+			this->label5 = (gcnew System::Windows::Forms::Label());
+			this->label6 = (gcnew System::Windows::Forms::Label());
+			this->label7 = (gcnew System::Windows::Forms::Label());
+			this->label8 = (gcnew System::Windows::Forms::Label());
+			this->label9 = (gcnew System::Windows::Forms::Label());
+			this->label10 = (gcnew System::Windows::Forms::Label());
+			this->label11 = (gcnew System::Windows::Forms::Label());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->BeginInit();
 			this->SuspendLayout();
 			// 
@@ -226,7 +258,7 @@ namespace Graph {
 			// 
 			// button_Draw
 			// 
-			this->button_Draw->Location = System::Drawing::Point(824, 363);
+			this->button_Draw->Location = System::Drawing::Point(38, 554);
 			this->button_Draw->Name = L"button_Draw";
 			this->button_Draw->Size = System::Drawing::Size(142, 29);
 			this->button_Draw->TabIndex = 1;
@@ -317,11 +349,155 @@ namespace Graph {
 			this->label3->TabIndex = 8;
 			this->label3->Text = L"p";
 			// 
+			// textBox1
+			// 
+			this->textBox1->Location = System::Drawing::Point(38, 498);
+			this->textBox1->Name = L"textBox1";
+			this->textBox1->Size = System::Drawing::Size(100, 20);
+			this->textBox1->TabIndex = 9;
+			// 
+			// textBox2
+			// 
+			this->textBox2->Location = System::Drawing::Point(144, 498);
+			this->textBox2->Name = L"textBox2";
+			this->textBox2->Size = System::Drawing::Size(100, 20);
+			this->textBox2->TabIndex = 10;
+			// 
+			// textBox3
+			// 
+			this->textBox3->Location = System::Drawing::Point(250, 498);
+			this->textBox3->Name = L"textBox3";
+			this->textBox3->Size = System::Drawing::Size(100, 20);
+			this->textBox3->TabIndex = 11;
+			// 
+			// textBox4
+			// 
+			this->textBox4->Location = System::Drawing::Point(356, 498);
+			this->textBox4->Name = L"textBox4";
+			this->textBox4->Size = System::Drawing::Size(100, 20);
+			this->textBox4->TabIndex = 12;
+			// 
+			// textBox5
+			// 
+			this->textBox5->Location = System::Drawing::Point(462, 498);
+			this->textBox5->Name = L"textBox5";
+			this->textBox5->Size = System::Drawing::Size(100, 20);
+			this->textBox5->TabIndex = 13;
+			// 
+			// textBox6
+			// 
+			this->textBox6->Location = System::Drawing::Point(568, 498);
+			this->textBox6->Name = L"textBox6";
+			this->textBox6->Size = System::Drawing::Size(100, 20);
+			this->textBox6->TabIndex = 14;
+			// 
+			// textBox7
+			// 
+			this->textBox7->Location = System::Drawing::Point(674, 498);
+			this->textBox7->Name = L"textBox7";
+			this->textBox7->Size = System::Drawing::Size(100, 20);
+			this->textBox7->TabIndex = 15;
+			// 
+			// textBox8
+			// 
+			this->textBox8->Location = System::Drawing::Point(780, 498);
+			this->textBox8->Name = L"textBox8";
+			this->textBox8->Size = System::Drawing::Size(100, 20);
+			this->textBox8->TabIndex = 16;
+			// 
+			// label4
+			// 
+			this->label4->AutoSize = true;
+			this->label4->Location = System::Drawing::Point(70, 482);
+			this->label4->Name = L"label4";
+			this->label4->Size = System::Drawing::Size(27, 13);
+			this->label4->TabIndex = 17;
+			this->label4->Text = L"Eksi";
+			// 
+			// label5
+			// 
+			this->label5->AutoSize = true;
+			this->label5->Location = System::Drawing::Point(185, 482);
+			this->label5->Name = L"label5";
+			this->label5->Size = System::Drawing::Size(18, 13);
+			this->label5->TabIndex = 18;
+			this->label5->Text = L"x_";
+			// 
+			// label6
+			// 
+			this->label6->AutoSize = true;
+			this->label6->Location = System::Drawing::Point(274, 482);
+			this->label6->Name = L"label6";
+			this->label6->Size = System::Drawing::Size(51, 13);
+			this->label6->TabIndex = 19;
+			this->label6->Text = L"|Eksi - x_|";
+			// 
+			// label7
+			// 
+			this->label7->AutoSize = true;
+			this->label7->Location = System::Drawing::Point(391, 482);
+			this->label7->Name = L"label7";
+			this->label7->Size = System::Drawing::Size(28, 13);
+			this->label7->TabIndex = 20;
+			this->label7->Text = L"Dksi";
+			// 
+			// label8
+			// 
+			this->label8->AutoSize = true;
+			this->label8->Location = System::Drawing::Point(500, 482);
+			this->label8->Name = L"label8";
+			this->label8->Size = System::Drawing::Size(20, 13);
+			this->label8->TabIndex = 21;
+			this->label8->Text = L"S2";
+			// 
+			// label9
+			// 
+			this->label9->AutoSize = true;
+			this->label9->Location = System::Drawing::Point(593, 482);
+			this->label9->Name = L"label9";
+			this->label9->Size = System::Drawing::Size(54, 13);
+			this->label9->TabIndex = 22;
+			this->label9->Text = L"|Dksi - S2|";
+			// 
+			// label10
+			// 
+			this->label10->AutoSize = true;
+			this->label10->Location = System::Drawing::Point(708, 482);
+			this->label10->Name = L"label10";
+			this->label10->Size = System::Drawing::Size(28, 13);
+			this->label10->TabIndex = 23;
+			this->label10->Text = L"Me_";
+			// 
+			// label11
+			// 
+			this->label11->AutoSize = true;
+			this->label11->Location = System::Drawing::Point(821, 482);
+			this->label11->Name = L"label11";
+			this->label11->Size = System::Drawing::Size(21, 13);
+			this->label11->TabIndex = 24;
+			this->label11->Text = L"R_";
+			// 
 			// MyForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(1406, 618);
+			this->ClientSize = System::Drawing::Size(1440, 618);
+			this->Controls->Add(this->label11);
+			this->Controls->Add(this->label10);
+			this->Controls->Add(this->label9);
+			this->Controls->Add(this->label8);
+			this->Controls->Add(this->label7);
+			this->Controls->Add(this->label6);
+			this->Controls->Add(this->label5);
+			this->Controls->Add(this->label4);
+			this->Controls->Add(this->textBox8);
+			this->Controls->Add(this->textBox7);
+			this->Controls->Add(this->textBox6);
+			this->Controls->Add(this->textBox5);
+			this->Controls->Add(this->textBox4);
+			this->Controls->Add(this->textBox3);
+			this->Controls->Add(this->textBox2);
+			this->Controls->Add(this->textBox1);
 			this->Controls->Add(this->label3);
 			this->Controls->Add(this->label2);
 			this->Controls->Add(this->label1);
@@ -395,7 +571,77 @@ namespace Graph {
 		int M = Convert::ToInt64(textBox_M->Text);
 		double p = Convert::ToDouble(textBox_p->Text);
 
-		std::vector<int> n = Vector_n_Generator(N, M, p);
+		//std::vector<int> n = Vector_n_Generator(N, M, p);
+		std::vector<int> n;
+		for (int i = 0; i <= M; i++)
+		{
+			n.push_back(0);
+		}
+		std::vector<int> x; //выборочные значения
+		for (int i = 0; i < N; i++)
+		{
+			x.push_back(0);
+		}
+		for (int i = 0; i < N; i++)
+		{
+			int count = 0;
+			for (int k = 0; k < M; k++)
+			{
+				double tmp = FRand(0.0, 1.0);
+				if (tmp <= p)
+				{
+					count++;
+					x[i]++;
+				}
+			}
+			n[count]++;
+		}
+		//выборочное среднее 
+		double Vib_Eksi = 0;
+		for (int i = 0; i < N; i++)
+		{
+			Vib_Eksi += x[i];
+		}
+		Vib_Eksi /= (double)N;
+		//выборочная дисперсия
+		double Vib_Dksi = 0;
+		for (int i = 0; i < N; i++)
+		{
+			Vib_Dksi += (x[i] - Vib_Eksi) * (x[i] - Vib_Eksi);
+		}
+		Vib_Dksi /= (double)N;
+		//размах (упорядочим x_i)
+		std::vector<int> x_sort = x;
+		for (int i = 0; i < N; i++) {
+			for (int j = 0; j < N - 1; j++) {
+				if (x_sort[j] > x_sort[j + 1]) {
+					int b = x_sort[j]; // создали дополнительную переменную
+					x_sort[j] = x_sort[j + 1]; // меняем местами
+					x_sort[j + 1] = b; // значения элементов
+				}
+			}
+		}
+		double R = (double)(x_sort[N - 1] - x_sort[0]);
+		//выборочная медиана
+		double Me;
+		int k_mid = N / 2;
+		if (N == 2 * k_mid + 1)
+		{
+			Me = (double)x_sort[k_mid];
+		}
+		else
+		{
+			Me = (x_sort[k_mid - 1] + x_sort[k_mid]) / 2.0;
+		}
+
+		textBox1->Text = Convert::ToString(Get_Eksi(N, M, p));
+		textBox2->Text = Convert::ToString(Vib_Eksi);
+		textBox3->Text = Convert::ToString(std::abs(Get_Eksi(N, M, p) - Vib_Eksi));
+		textBox4->Text = Convert::ToString(Get_Dksi(N, M, p));
+		textBox5->Text = Convert::ToString(Vib_Dksi);
+		textBox6->Text = Convert::ToString(std::abs(Get_Dksi(N, M, p) - Vib_Dksi));
+		textBox7->Text = Convert::ToString(Me);
+		textBox8->Text = Convert::ToString(R);
 
 		//std::list<std::vector<double>> num_func = numerical_function_task11(x_0, u_0, z_0, h, xmax, n);
 		//std::list<std::vector<double>> num_func = numerical_function_control_task11(x_0, u_0, z_0, h, xmax, n, epsilon, m, c, k, k_, RBC);

@@ -33,3 +33,13 @@ std::vector<int> Vector_n_Generator(int N, int M, double p)
 	}
 	return n;
 }
+
+double Get_Eksi(int N, int M, double p)
+{
+	return M * p;
+}
+
+double Get_Dksi(int N, int M, double p)
+{
+	return M * p * (1.0 - p);
+}

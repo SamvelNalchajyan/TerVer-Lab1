@@ -17,7 +17,7 @@ int main()
 	cout << "¬ведите M и p:" << endl;
 	cin >> M >> p;
 	
-	vector<int> n;
+	//vector<int> n;
 	/*
 	for (int i = 0; i <= M; i++)
 	{
@@ -38,7 +38,33 @@ int main()
 		n[count]++;
 	}
 	*/
-	n = Vector_n_Generator(N, M, p);
+	
+	//n = Vector_n_Generator(N, M, p);
+	vector<int> n;
+	for (int i = 0; i <= M; i++)
+	{
+		n.push_back(0);
+	}
+	vector<int> x; //выборочные значени€
+	for (int i = 0; i < N; i++)
+	{
+		x.push_back(0);
+	}
+	for (int i = 0; i < N; i++)
+	{
+		int count = 0;
+		for (int k = 0; k < M; k++)
+		{
+			double tmp = FRand(0.0, 1.0);
+			if (tmp <= p)
+			{
+				count++;
+				x[i]++;
+			}
+		}
+		n[count]++;
+	}
+
 	//ѕечать
 	cout << endl;
 	for (int i = 0; i <= M; i++)
@@ -54,6 +80,11 @@ int main()
 	for (int i = 0; i <= M; i++)
 	{
 		cout << left << setw(5) << n[i] / static_cast<double>(N) << " ";
+	}
+	cout << endl << endl << "x:" << endl;
+	for (int i = 0; i < N; i++)
+	{
+		cout << x[i] << " ";
 	}
 	cout << endl;
 
