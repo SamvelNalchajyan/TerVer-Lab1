@@ -78,6 +78,22 @@ namespace Graph {
 	private: System::Windows::Forms::Label^ label13;
 
 
+	private: System::Windows::Forms::DataGridView^ dataGridView3;
+	private: System::Windows::Forms::DataGridViewTextBoxColumn^ dataGridViewTextBoxColumn4;
+	private: System::Windows::Forms::Button^ button1;
+	private: System::Windows::Forms::TextBox^ textBox_alpha;
+	private: System::Windows::Forms::Label^ label15;
+	private: System::Windows::Forms::TextBox^ textBox_task3;
+	private: System::Windows::Forms::Label^ label16;
+	private: System::Windows::Forms::TextBox^ textBox9;
+	private: System::Windows::Forms::Label^ label17;
+	private: System::Windows::Forms::TextBox^ textBox10;
+	private: System::Windows::Forms::Label^ label14;
+	private: System::Windows::Forms::TextBox^ textBox11;
+	private: System::Windows::Forms::Label^ label18;
+
+
+
 
 
 
@@ -255,8 +271,22 @@ namespace Graph {
 			this->label12 = (gcnew System::Windows::Forms::Label());
 			this->textBox_max_D = (gcnew System::Windows::Forms::TextBox());
 			this->label13 = (gcnew System::Windows::Forms::Label());
+			this->dataGridView3 = (gcnew System::Windows::Forms::DataGridView());
+			this->dataGridViewTextBoxColumn4 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->button1 = (gcnew System::Windows::Forms::Button());
+			this->textBox_alpha = (gcnew System::Windows::Forms::TextBox());
+			this->label15 = (gcnew System::Windows::Forms::Label());
+			this->textBox_task3 = (gcnew System::Windows::Forms::TextBox());
+			this->label16 = (gcnew System::Windows::Forms::Label());
+			this->textBox9 = (gcnew System::Windows::Forms::TextBox());
+			this->label17 = (gcnew System::Windows::Forms::Label());
+			this->textBox10 = (gcnew System::Windows::Forms::TextBox());
+			this->label14 = (gcnew System::Windows::Forms::Label());
+			this->textBox11 = (gcnew System::Windows::Forms::TextBox());
+			this->label18 = (gcnew System::Windows::Forms::Label());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView2))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView3))->BeginInit();
 			this->SuspendLayout();
 			// 
 			// zedGraphControl1
@@ -558,11 +588,130 @@ namespace Graph {
 			this->label13->TabIndex = 29;
 			this->label13->Text = L"max|D|";
 			// 
+			// dataGridView3
+			// 
+			this->dataGridView3->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
+			this->dataGridView3->Columns->AddRange(gcnew cli::array< System::Windows::Forms::DataGridViewColumn^  >(1) { this->dataGridViewTextBoxColumn4 });
+			this->dataGridView3->Location = System::Drawing::Point(1449, 30);
+			this->dataGridView3->Name = L"dataGridView3";
+			this->dataGridView3->RowHeadersVisible = false;
+			this->dataGridView3->Size = System::Drawing::Size(151, 327);
+			this->dataGridView3->TabIndex = 32;
+			// 
+			// dataGridViewTextBoxColumn4
+			// 
+			this->dataGridViewTextBoxColumn4->HeaderText = L"k_i";
+			this->dataGridViewTextBoxColumn4->Name = L"dataGridViewTextBoxColumn4";
+			this->dataGridViewTextBoxColumn4->Width = 120;
+			// 
+			// button1
+			// 
+			this->button1->Location = System::Drawing::Point(1525, 363);
+			this->button1->Name = L"button1";
+			this->button1->Size = System::Drawing::Size(75, 23);
+			this->button1->TabIndex = 33;
+			this->button1->Text = L"Стереть";
+			this->button1->UseVisualStyleBackColor = true;
+			this->button1->Click += gcnew System::EventHandler(this, &MyForm::button1_Click_1);
+			// 
+			// textBox_alpha
+			// 
+			this->textBox_alpha->Location = System::Drawing::Point(356, 559);
+			this->textBox_alpha->Name = L"textBox_alpha";
+			this->textBox_alpha->Size = System::Drawing::Size(100, 20);
+			this->textBox_alpha->TabIndex = 34;
+			this->textBox_alpha->Text = L"0,5";
+			// 
+			// label15
+			// 
+			this->label15->AutoSize = true;
+			this->label15->Location = System::Drawing::Point(317, 562);
+			this->label15->Name = L"label15";
+			this->label15->Size = System::Drawing::Size(33, 13);
+			this->label15->TabIndex = 35;
+			this->label15->Text = L"alpha";
+			// 
+			// textBox_task3
+			// 
+			this->textBox_task3->Location = System::Drawing::Point(1234, 559);
+			this->textBox_task3->Name = L"textBox_task3";
+			this->textBox_task3->Size = System::Drawing::Size(155, 20);
+			this->textBox_task3->TabIndex = 36;
+			// 
+			// label16
+			// 
+			this->label16->AutoSize = true;
+			this->label16->Location = System::Drawing::Point(1174, 562);
+			this->label16->Name = L"label16";
+			this->label16->Size = System::Drawing::Size(54, 13);
+			this->label16->TabIndex = 37;
+			this->label16->Text = L"Гипотеза";
+			// 
+			// textBox9
+			// 
+			this->textBox9->Location = System::Drawing::Point(1449, 365);
+			this->textBox9->Name = L"textBox9";
+			this->textBox9->Size = System::Drawing::Size(70, 20);
+			this->textBox9->TabIndex = 38;
+			// 
+			// label17
+			// 
+			this->label17->AutoSize = true;
+			this->label17->Location = System::Drawing::Point(1429, 368);
+			this->label17->Name = L"label17";
+			this->label17->Size = System::Drawing::Size(14, 13);
+			this->label17->TabIndex = 39;
+			this->label17->Text = L"K";
+			// 
+			// textBox10
+			// 
+			this->textBox10->Location = System::Drawing::Point(1444, 559);
+			this->textBox10->Name = L"textBox10";
+			this->textBox10->Size = System::Drawing::Size(155, 20);
+			this->textBox10->TabIndex = 40;
+			// 
+			// label14
+			// 
+			this->label14->AutoSize = true;
+			this->label14->Location = System::Drawing::Point(1411, 562);
+			this->label14->Name = L"label14";
+			this->label14->Size = System::Drawing::Size(27, 13);
+			this->label14->TabIndex = 41;
+			this->label14->Text = L"R_0";
+			// 
+			// textBox11
+			// 
+			this->textBox11->Location = System::Drawing::Point(1445, 585);
+			this->textBox11->Name = L"textBox11";
+			this->textBox11->Size = System::Drawing::Size(155, 20);
+			this->textBox11->TabIndex = 42;
+			// 
+			// label18
+			// 
+			this->label18->AutoSize = true;
+			this->label18->Location = System::Drawing::Point(1426, 588);
+			this->label18->Name = L"label18";
+			this->label18->Size = System::Drawing::Size(13, 13);
+			this->label18->TabIndex = 43;
+			this->label18->Text = L"F";
+			// 
 			// MyForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(1440, 618);
+			this->ClientSize = System::Drawing::Size(1611, 636);
+			this->Controls->Add(this->label18);
+			this->Controls->Add(this->textBox11);
+			this->Controls->Add(this->label14);
+			this->Controls->Add(this->textBox10);
+			this->Controls->Add(this->label17);
+			this->Controls->Add(this->textBox9);
+			this->Controls->Add(this->label16);
+			this->Controls->Add(this->textBox_task3);
+			this->Controls->Add(this->label15);
+			this->Controls->Add(this->textBox_alpha);
+			this->Controls->Add(this->button1);
+			this->Controls->Add(this->dataGridView3);
 			this->Controls->Add(this->label13);
 			this->Controls->Add(this->textBox_max_D);
 			this->Controls->Add(this->label12);
@@ -598,6 +747,7 @@ namespace Graph {
 			this->Load += gcnew System::EventHandler(this, &MyForm::MyForm_Load);
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView2))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView3))->EndInit();
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
@@ -735,6 +885,7 @@ namespace Graph {
 		// Список точек
 		dataGridView1->Rows->Clear(); 
 		dataGridView2->Rows->Clear();
+		//dataGridView3->Rows->Clear();
 		//std::list<std::vector<double>> ::iterator it;
 		//int i = 0;
 		//double x = x_0;
@@ -864,10 +1015,75 @@ namespace Graph {
 		}
 		*/
 		
+		// Часть 3
+		//int K = Convert::ToInt64(textBox_k->Text);
+		int K = dataGridView3->Rows->Count;
+		textBox9->Text = Convert::ToString(K);
+		double q_j, R_0 = 0;
+		int n_j = 0;
+		std::vector<double> z(K + 1);
+		//z[0] = -10.0;
+		//z[K] = (double)M + 10.0;
+		z[0] = 0;
+		z[K] = (double)M + 1;
+		for (int i = 1; i <= K - 1; i++)
+		{
+			z[i] = Convert::ToDouble(dataGridView3->Rows[i - 1]->Cells[0]->Value);
+		}
+
+		for (int j = 1; j <= K; j++)
+		{
+			n_j = 0;
+			for (int i = 0; i < N; i++)
+			{
+				if ((z[j - 1] <= x_sort[i]) && (x_sort[i] < z[j]))
+				{
+					n_j++;
+				}
+			}
+			q_j = Teor_F(z[j], M, p) - Teor_F(z[j - 1], M, p);
+			//dataGridView2->Rows[j]->Cells[0]->Value = q_j;
+
+			R_0 += ((n_j - N * q_j) * (n_j - N * q_j)) / (N * q_j);
+		}
+		textBox10->Text = Convert::ToString(R_0);
+
+		double left = 0, right;
+
+		int N_for_integral = 1000;
+		double F = 0;
+		double step = R_0 / (double)N_for_integral;
+		double r = K - 1;
+		if (R_0 != 0)
+		{
+			for (int i = 0; i < N_for_integral; i++)
+			{
+				//F += step * (pow(2, -r / 2.0) / tgamma(r / 2.0)) * pow(i * step, r / 2.0 - 1) * exp(-i * step / 2.0);
+				double a = i * step;
+				double b = a + step;
+				//F += (f_xi(a + (b - a) * i / N_for_integral, r) + f_xi(a + (b - a) * (i + 1) / N_for_integral, r)) * ((b - a) / (2 * N_for_integral));
+				F += step * f_xi(i * step, r);
+			}
+		}
+		//F = 0;
+		F = 1.0 - F;
+		textBox11->Text = Convert::ToString(F);
+
+		double alpha = Convert::ToDouble(textBox_alpha->Text);
+
+		if (F >= alpha)
+		{
+			textBox_task3->Text = "принята";
+		}
+		else
+		{
+			textBox_task3->Text = "отвергнута";
+		}
+
 		//textBox_max_GE->Text = Convert::ToString(global_error_max);
 		//textBox_max_GE_x->Text = Convert::ToString(global_error_max_x);
 
-		LineItem Curve1 = panel->AddCurve("F", f1_list, Color::Blue,SymbolType::None);
+		LineItem Curve1 = panel->AddCurve("F", f1_list, Color::Blue, SymbolType::None);
 		LineItem Curve2 = panel->AddCurve("F_", f2_list, Color::Red, SymbolType::None);
 		LineItem Curve3 = panel->AddCurve("F - F_", f3_list, Color::Green, SymbolType::None);
 
@@ -949,6 +1165,9 @@ private: System::Void button_Clear_Click(System::Object^ sender, System::EventAr
 	//zedGraphControl3->AxisChange();
 	// Обновляем график
 	//zedGraphControl3->Invalidate();
+}
+private: System::Void button1_Click_1(System::Object^ sender, System::EventArgs^ e) {
+	dataGridView3->Rows->Clear();
 }
 };
 }

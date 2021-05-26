@@ -64,14 +64,30 @@ double Sochet(int n, int k)
 
 double Teor_F(double y, int n, double p)
 {
-	int cel_y = (int)y;
+	//int cel_y = (int)y;
 	double res = 0;
-	if (y >= 0)
+	if (y >= 0 && y < n)
 	{
-		for (int i = 0; i <= cel_y; i++)
+		for (int i = 0; i < y; i++)
 		{
 			res += Sochet(n, i) * pow(p, i) * pow(1.0 - p, n - i);
 		}
 	}
+	if (y >= n)
+	{
+		res = 1;
+	}
 	return res;
+}
+
+double f_xi(double x, int r)
+{
+	if (x <= 0)
+	{
+		return 0;
+	}
+	else
+	{
+		return pow(2, -r / 2.0) * (1.0 / tgammal(r / 2.0)) * pow(x, r / 2.0 - 1) * exp(-x / 2.0);
+	}
 }
