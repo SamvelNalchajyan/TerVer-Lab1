@@ -10,6 +10,9 @@ using namespace std;
 int main()
 {
 	setlocale(LC_CTYPE, "Russian");
+
+	cout << "4! = " << factorial(4) << endl;
+	cout << "C_1_0 = " << Sochet(5, 2) << endl;
 	int N = 10, M = 0;
 	double p = 0.0;
 	cout << "¬ведите N:" << endl;
@@ -87,6 +90,8 @@ int main()
 		cout << x[i] << " ";
 	}
 	cout << endl;
+
+	
 
 	system("pause");
 	return 0;

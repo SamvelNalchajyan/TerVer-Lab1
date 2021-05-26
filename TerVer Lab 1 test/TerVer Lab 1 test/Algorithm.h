@@ -43,3 +43,35 @@ double Get_Dksi(int N, int M, double p)
 {
 	return M * p * (1.0 - p);
 }
+
+double factorial(int n)
+{
+	double res = 1;
+	for (int i = 1; i <= n; i++)
+	{
+		res *= i;
+	}
+	return res;
+}
+
+double Sochet(int n, int k)
+{
+	double n_f = factorial(n);
+	double k_f = factorial(k);
+	double n_k_f = factorial(n - k);
+	return n_f / (k_f * n_k_f);
+}
+
+double Teor_F(double y, int n, double p)
+{
+	int cel_y = (int)y;
+	double res = 0;
+	if (y >= 0)
+	{
+		for (int i = 0; i <= cel_y; i++)
+		{
+			res += Sochet(n, i) * pow(p, i) * pow(1.0 - p, n - i);
+		}
+	}
+	return res;
+}

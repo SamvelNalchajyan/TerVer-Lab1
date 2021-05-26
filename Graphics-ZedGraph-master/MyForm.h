@@ -67,6 +67,15 @@ namespace Graph {
 	private: System::Windows::Forms::Label^ label9;
 	private: System::Windows::Forms::Label^ label10;
 	private: System::Windows::Forms::Label^ label11;
+	private: System::Windows::Forms::DataGridView^ dataGridView2;
+	private: System::Windows::Forms::DataGridViewTextBoxColumn^ dataGridViewTextBoxColumn1;
+	private: System::Windows::Forms::DataGridViewTextBoxColumn^ dataGridViewTextBoxColumn2;
+	private: System::Windows::Forms::DataGridViewTextBoxColumn^ dataGridViewTextBoxColumn3;
+	private: System::Windows::Forms::TextBox^ textBox_max_p_err;
+
+	private: System::Windows::Forms::Label^ label12;
+	private: System::Windows::Forms::TextBox^ textBox_max_D;
+	private: System::Windows::Forms::Label^ label13;
 
 
 
@@ -238,7 +247,16 @@ namespace Graph {
 			this->label9 = (gcnew System::Windows::Forms::Label());
 			this->label10 = (gcnew System::Windows::Forms::Label());
 			this->label11 = (gcnew System::Windows::Forms::Label());
+			this->dataGridView2 = (gcnew System::Windows::Forms::DataGridView());
+			this->dataGridViewTextBoxColumn1 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->dataGridViewTextBoxColumn2 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->dataGridViewTextBoxColumn3 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->textBox_max_p_err = (gcnew System::Windows::Forms::TextBox());
+			this->label12 = (gcnew System::Windows::Forms::Label());
+			this->textBox_max_D = (gcnew System::Windows::Forms::TextBox());
+			this->label13 = (gcnew System::Windows::Forms::Label());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView2))->BeginInit();
 			this->SuspendLayout();
 			// 
 			// zedGraphControl1
@@ -477,11 +495,79 @@ namespace Graph {
 			this->label11->TabIndex = 24;
 			this->label11->Text = L"R_";
 			// 
+			// dataGridView2
+			// 
+			this->dataGridView2->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
+			this->dataGridView2->Columns->AddRange(gcnew cli::array< System::Windows::Forms::DataGridViewColumn^  >(3) {
+				this->dataGridViewTextBoxColumn1,
+					this->dataGridViewTextBoxColumn2, this->dataGridViewTextBoxColumn3
+			});
+			this->dataGridView2->Location = System::Drawing::Point(972, 30);
+			this->dataGridView2->Name = L"dataGridView2";
+			this->dataGridView2->RowHeadersVisible = false;
+			this->dataGridView2->Size = System::Drawing::Size(417, 327);
+			this->dataGridView2->TabIndex = 25;
+			// 
+			// dataGridViewTextBoxColumn1
+			// 
+			this->dataGridViewTextBoxColumn1->HeaderText = L"y_i";
+			this->dataGridViewTextBoxColumn1->Name = L"dataGridViewTextBoxColumn1";
+			this->dataGridViewTextBoxColumn1->Width = 120;
+			// 
+			// dataGridViewTextBoxColumn2
+			// 
+			this->dataGridViewTextBoxColumn2->HeaderText = L"P";
+			this->dataGridViewTextBoxColumn2->Name = L"dataGridViewTextBoxColumn2";
+			this->dataGridViewTextBoxColumn2->Width = 120;
+			// 
+			// dataGridViewTextBoxColumn3
+			// 
+			this->dataGridViewTextBoxColumn3->HeaderText = L"n_i / n";
+			this->dataGridViewTextBoxColumn3->Name = L"dataGridViewTextBoxColumn3";
+			this->dataGridViewTextBoxColumn3->Width = 120;
+			// 
+			// textBox_max_p_err
+			// 
+			this->textBox_max_p_err->Location = System::Drawing::Point(1234, 498);
+			this->textBox_max_p_err->Name = L"textBox_max_p_err";
+			this->textBox_max_p_err->Size = System::Drawing::Size(155, 20);
+			this->textBox_max_p_err->TabIndex = 26;
+			// 
+			// label12
+			// 
+			this->label12->AutoSize = true;
+			this->label12->Location = System::Drawing::Point(1157, 501);
+			this->label12->Name = L"label12";
+			this->label12->Size = System::Drawing::Size(71, 13);
+			this->label12->TabIndex = 27;
+			this->label12->Text = L"max|P - n_i/n|";
+			// 
+			// textBox_max_D
+			// 
+			this->textBox_max_D->Location = System::Drawing::Point(384, 372);
+			this->textBox_max_D->Name = L"textBox_max_D";
+			this->textBox_max_D->Size = System::Drawing::Size(155, 20);
+			this->textBox_max_D->TabIndex = 28;
+			// 
+			// label13
+			// 
+			this->label13->AutoSize = true;
+			this->label13->Location = System::Drawing::Point(340, 375);
+			this->label13->Name = L"label13";
+			this->label13->Size = System::Drawing::Size(38, 13);
+			this->label13->TabIndex = 29;
+			this->label13->Text = L"max|D|";
+			// 
 			// MyForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(1440, 618);
+			this->Controls->Add(this->label13);
+			this->Controls->Add(this->textBox_max_D);
+			this->Controls->Add(this->label12);
+			this->Controls->Add(this->textBox_max_p_err);
+			this->Controls->Add(this->dataGridView2);
 			this->Controls->Add(this->label11);
 			this->Controls->Add(this->label10);
 			this->Controls->Add(this->label9);
@@ -511,6 +597,7 @@ namespace Graph {
 			this->Text = L"Самвел Налчаджян Лаб 1";
 			this->Load += gcnew System::EventHandler(this, &MyForm::MyForm_Load);
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView2))->EndInit();
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
@@ -537,8 +624,8 @@ namespace Graph {
 		panel->Title->Text = "График";
 		
 		PointPairList^ f1_list = gcnew ZedGraph::PointPairList();
-		//PointPairList^ f2_list = gcnew ZedGraph::PointPairList();
-		//PointPairList^ f3_list = gcnew ZedGraph::PointPairList();
+		PointPairList^ f2_list = gcnew ZedGraph::PointPairList();
+		PointPairList^ f3_list = gcnew ZedGraph::PointPairList();
 
 		// Интервал, где есть данные
 		/*
@@ -636,10 +723,10 @@ namespace Graph {
 
 		textBox1->Text = Convert::ToString(Get_Eksi(N, M, p));
 		textBox2->Text = Convert::ToString(Vib_Eksi);
-		textBox3->Text = Convert::ToString(std::abs(Get_Eksi(N, M, p) - Vib_Eksi));
+		textBox3->Text = Convert::ToString(fabs(Get_Eksi(N, M, p) - Vib_Eksi));
 		textBox4->Text = Convert::ToString(Get_Dksi(N, M, p));
 		textBox5->Text = Convert::ToString(Vib_Dksi);
-		textBox6->Text = Convert::ToString(std::abs(Get_Dksi(N, M, p) - Vib_Dksi));
+		textBox6->Text = Convert::ToString(fabs(Get_Dksi(N, M, p) - Vib_Dksi));
 		textBox7->Text = Convert::ToString(Me);
 		textBox8->Text = Convert::ToString(R);
 
@@ -647,6 +734,7 @@ namespace Graph {
 		//std::list<std::vector<double>> num_func = numerical_function_control_task11(x_0, u_0, z_0, h, xmax, n, epsilon, m, c, k, k_, RBC);
 		// Список точек
 		dataGridView1->Rows->Clear(); 
+		dataGridView2->Rows->Clear();
 		//std::list<std::vector<double>> ::iterator it;
 		//int i = 0;
 		//double x = x_0;
@@ -659,6 +747,8 @@ namespace Graph {
 		//double max_h = 0;
 		//int C1_count = 0, C2_count = 0;
 
+		double max_P_err = 0;
+
 		for (int i = 0; i <= M; i++)
 		{
 			//Печать таблицы
@@ -666,6 +756,64 @@ namespace Graph {
 			dataGridView1->Rows[i]->Cells[0]->Value = i;
 			dataGridView1->Rows[i]->Cells[1]->Value = n[i];
 			dataGridView1->Rows[i]->Cells[2]->Value = n[i] / static_cast<double>(N);
+			double koef = Sochet(M, i);
+			dataGridView2->Rows->Add();
+			dataGridView2->Rows[i]->Cells[0]->Value = i;
+			dataGridView2->Rows[i]->Cells[1]->Value = koef * pow(p, i) * pow(1.0 - p, M - i);
+			dataGridView2->Rows[i]->Cells[2]->Value = n[i] / static_cast<double>(N);
+			double P_err = fabs(koef * pow(p, i) * pow(1.0 - p, M - i) - n[i] / static_cast<double>(N));
+			if (max_P_err <= P_err)
+			{
+				max_P_err = P_err;
+			}
+		}
+
+		textBox_max_p_err->Text = Convert::ToString(max_P_err);
+
+		double max_D = 0;
+		for (double x_ = -0.5; x_ <= (double)M + 1.0; x_ += 1.0)
+		{
+			double emp_F_x;
+			double teor_F_x;
+			teor_F_x = Teor_F(x_, M, p);
+
+			int count = 0;
+			for (int i = 0; i < N; i++)
+			{
+				if (x_sort[i] <= x_)
+				{
+					count++;
+					//emp_F_x = (1.0 / N) * x[i];
+				}
+			}
+			emp_F_x = count / (double)N;
+			double delta = fabs(teor_F_x - emp_F_x);
+			if (max_D <= delta)
+			{
+				max_D = delta;
+			}
+
+		}
+		textBox_max_D->Text = Convert::ToString(max_D);
+
+		// Графики
+		for (double x_ = -1; x_ <= (double)M + 1.0; x_ += 0.005)
+		{
+			double emp_F_x;
+			int count = 0;
+			for (int i = 0; i < N; i++)
+			{
+				if (x_sort[i] <= x_)
+				{
+					count++;
+					//emp_F_x = (1.0 / N) * x[i];
+				}
+			}
+			emp_F_x = count / (double)N;
+
+			f1_list->Add(x_, Teor_F(x_, M, p));
+			f2_list->Add(x_, emp_F_x);
+			f3_list->Add(x_, Teor_F(x_, M, p) - emp_F_x);
 		}
 
 		/*
@@ -719,9 +867,9 @@ namespace Graph {
 		//textBox_max_GE->Text = Convert::ToString(global_error_max);
 		//textBox_max_GE_x->Text = Convert::ToString(global_error_max_x);
 
-		LineItem Curve1 = panel->AddCurve("", f1_list, Color::Blue,SymbolType::None);
-		//LineItem Curve2 = panel2->AddCurve("", f2_list, Color::Red, SymbolType::None);
-		//LineItem Curve3 = panel3->AddCurve("", f3_list, Color::Black, SymbolType::None);
+		LineItem Curve1 = panel->AddCurve("F", f1_list, Color::Blue,SymbolType::None);
+		LineItem Curve2 = panel->AddCurve("F_", f2_list, Color::Red, SymbolType::None);
+		LineItem Curve3 = panel->AddCurve("F - F_", f3_list, Color::Green, SymbolType::None);
 
 		//textBox_max_LE->Text = Convert::ToString(max_local_error);
 		//textBox_max_h->Text = Convert::ToString(max_h);
@@ -733,6 +881,8 @@ namespace Graph {
 		// Устанавливаем интересующий нас интервал по оси X
 		//panel->XAxis->Scale->Min = xmin_limit;
 		//panel->XAxis->Scale->Max = xmax_limit;
+		panel->XAxis->Scale->Min = -1;
+		panel->XAxis->Scale->Max = M + 1;
 /*
 		// Устанавливаем интересующий нас интервал по оси Y
 		panel->YAxis->Scale->Min = ymin_limit;
